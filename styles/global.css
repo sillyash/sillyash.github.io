@@ -1,1 +1,43 @@
+@import "jetbrains-mono.css";
 
+:root {
+    --bg-color-main: #a0d901;
+    --bg-color-2: #000000;
+    --text-color-main: #000000;
+    --text-color-2: #ffffff;
+    --header-height: 50px;
+}
+
+* {
+    font-family: 'JetBrains Mono';
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+    background-color: var(--bg-color-2);
+    color: var(--text-color-2);
+}
+
+main {
+    width: 100%;
+    margin: var(--header-height) 0 0 0;
+    padding: 1rem;
+    background-color: var(--bg-color-main);
+    color: var(--text-color-main);
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--bg-color-2);
+    color: var(--text-color-2);
+}
