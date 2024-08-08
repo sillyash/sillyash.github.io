@@ -35,3 +35,7 @@ header > a > img {
 #navbar > a:hover {
     color: var(--bg-color-main);
 }
+
+#current-page {
+    color: var(--bg-color-main) !important;
+}

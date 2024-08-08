@@ -9,6 +9,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-height) + 30px);
 }
 
 body {
@@ -27,6 +28,7 @@ main {
 }
 
 .section-title {
+    margin-top: 3rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -39,10 +41,11 @@ main {
 
 .section-title-separator {
     margin: 0 1rem 0 1rem;
+    font-size: 2rem;
 }
 
 .update-date {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: bold;
     color: #4f6b00;
 }
@@ -51,17 +54,22 @@ section {
     margin-left: 1rem;
 }
 
-section > p {
-    margin-left: 1rem;
-}
-
 .glossary {
     font-style: italic;
     line-height: 1.7rem;
+    margin-bottom: 2rem;
 }
 
 .glossary-word {
+    color: var(--text-color-main);
     font-weight: 900;
+    text-decoration: none;
+    font-style: normal;
+    transition: 0.3s all;
+}
+
+.glossary-word:hover {
+    color: var(--text-color-2);
 }
 
 .glossary-word-def {

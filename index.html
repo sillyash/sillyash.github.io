@@ -14,8 +14,8 @@
       <img src="./assets/mitsuki.jpg"/>
     </a>
     <div id="navbar">
-      <a href="index.html">home</a>
-      <a href="#about">about</a>
+      <a id="current-page" href="#title">home</a>
+      <a href="#about">about me</a>
       <a href="projects.html">projects</a>
       <a href="contact.html">contact</a>
       <a href="https://github.com/sillyash/" target="_blank">github</a>
@@ -23,31 +23,24 @@
   </header>
 
   <main>
-    <h1>Ashley's GitHub page</h1>
-    <section>
+    <h1 id="title">Ashley's GitHub page</h1>
+    <section id="presentation">
       <div class="section-title">
-        <h2>main</h2>
+        <h2>presentation</h2>
         <p class="section-title-separator">·</p>
         <p class="update-date">Updated on 8/8/2024</p>
       </div>
-      <p>
+      <p style="font-weight: 900;">
         Hi!
       </p>
       <p>
-        I'm a student at Orsay's <span class="glossary-word">IUT</span>, from Paris-Saclay university, and I study computer science. I'm currently in an internship in the <span class="glossary-word">CNRS</span>, at <span class="glossary-word">IPSL</span>'s research center.
-      </p>
-      <p class="glossary">
-        <span class="glossary-word-def">CNRS</span> · National Scientific Research Center
-        <br>
-        <span class="glossary-word-def">IPSL</span> · Pierre-Simon Laplace Institute
-        <br>
-        <span class="glossary-word-def">IUT</span> · University Institute of Technology
+        I'm Ashley, a student at Orsay's IUT, from Paris-Saclay university, and I study computer science. I'm currently in an internship in the CNRS, at IPSL's research center.
       </p>
     </section>
 
-    <section id="#about">
+    <section id="about">
       <div class="section-title">
-        <h2>about</h2>
+        <h2>about me</h2>
         <p class="section-title-separator">·</p>
         <p class="update-date">Updated on 8/8/2024</p>
       </div>
@@ -88,10 +81,29 @@
         Concerning the OS I use, I use GNU/linux daily on my laptop, and use Windows on my desktop at home. I use the shell on both computers, so I'm comfortable with PowerShell and Bash (sh/zsh).
       </p>
     </section>
+
+    <section id="glossary">
+      <div class="section-title">
+        <h2>glossary</h2>
+        <p class="section-title-separator">·</p>
+        <p class="update-date">Updated on 8/8/2024</p>
+      </div>
+      <p class="glossary">
+        <span class="glossary-word-def">IUT</span> · University Institute of Technology
+        <br>
+        <span class="glossary-word-def">CNRS</span> · National Scientific Research Center
+        <br>
+        <span class="glossary-word-def">IPSL</span> · Pierre-Simon Laplace Institute
+        <br>
+        <span class="glossary-word-def">CompSci</span> · Computer Science
+      </p>
+    </section>
   </main>
 
   <footer>
     <h2>footer</h2>
   </footer>
+
+  <script src="./scripts/glossary.js"></script>
 </body>
 </html>

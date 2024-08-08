@@ -1,5 +1,6 @@
 @import "global.css";
 
-#about > p {
-    line-height: 50px;
+section > p {
+    margin: 0.8rem 0 0 1rem;
+    line-height: 1.6rem;
 }
