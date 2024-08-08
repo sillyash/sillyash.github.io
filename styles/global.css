@@ -1,52 +1,43 @@
+@charset "utf-8";
 @import "jetbrains-mono.css";
-
-:root {
-    --bg-color-main: #a0d901;
-    --bg-color-2: #000000;
-    --text-color-main: #000000;
-    --text-color-2: #ffffff;
-    --header-height: 80px;
-    --footer-height: 100px;
-}
+@import "header.css";
+@import "footer.css";
 
 * {
     font-family: 'JetBrains Mono';
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    min-width: 150px;
+    width: calc(100% - 2 * var(--padding));
     margin: 0;
-}
-
-header {
-    display: flex;
-    position: sticky;
-    padding: 10px;
-    width: 100%;
-    height: 60px;
-    background-color: var(--bg-color-2);
-    color: var(--text-color-2);
-}
-
-header > img {
-    object-fit: contain;
 }
 
 main {
     height: calc(100vh - var(--header-height) - var(--footer-height));
     background-size: cover;
     width: 100%;
-    padding: 1rem;
+    padding: var(--padding);
     background-color: var(--bg-color-main);
     color: var(--text-color-main);
 }
 
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    height: 80px;
-    width: 100%;
-    padding: 10px;
-    background-color: var(--bg-color-2);
-    color: var(--text-color-2);
+.section-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.section-title-separator {
+    margin: 0 1rem 0 1rem;
+}
+
+.update-date {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #4f6b00;
 }

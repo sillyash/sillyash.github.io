@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+:root {
+    --bg-color-main: #a0d901;
+    --bg-color-2: #000000;
+    --text-color-main: #000000;
+    --text-color-2: #ffffff;
+    --header-height: 80px;
+    --footer-height: 100px;
+    --padding: 10px;
+}

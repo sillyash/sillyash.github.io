@@ -1,0 +1,13 @@
+@charset "utf-8";
+@import "vars.css";
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    padding: var(--padding);
+    background-color: var(--bg-color-2);
+    color: var(--text-color-2);
+}
