@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import "vars.css";
 @import "jetbrains-mono.css";
 @import "header.css";
 @import "footer.css";
@@ -14,17 +15,19 @@ html {
 
 body {
     min-width: 150px;
+    background: var(--bg-color-main);
     width: calc(100% - 2 * var(--padding));
     margin: 0;
 }
 
 main {
-    height: 100%;
-    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
     padding: var(--padding);
     padding-top: calc(var(--header-height) + 2 * var(--padding));
-    background: var(--bg-color-main);
     color: var(--text-color-main);
+    height: 100%;
+    width: auto;
 }
 
 .section-title {
@@ -47,11 +50,11 @@ main {
 .update-date {
     font-size: 0.9rem;
     font-weight: bold;
-    color: #4f6b00;
+    color: var(--text-color-3);
 }
 
 section {
-    margin-left: 1rem;
+    margin-left: 2%;
 }
 
 .glossary {
@@ -61,7 +64,7 @@ section {
 }
 
 .glossary-word {
-    color: var(--text-color-main);
+    color: var(--text-color-4);
     font-weight: 900;
     text-decoration: none;
     font-style: normal;
