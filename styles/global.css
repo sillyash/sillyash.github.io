@@ -18,11 +18,11 @@ body {
 }
 
 main {
-    height: calc(100vh - var(--header-height) - var(--footer-height));
-    background-size: cover;
+    height: 100%;
     width: 100%;
     padding: var(--padding);
-    background-color: var(--bg-color-main);
+    padding-top: calc(var(--header-height) + 2 * var(--padding));
+    background: var(--bg-color-main);
     color: var(--text-color-main);
 }
 
@@ -30,6 +30,11 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.section-title > h2, .section-title > p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .section-title-separator {
@@ -40,4 +45,27 @@ main {
     font-size: 0.8rem;
     font-weight: bold;
     color: #4f6b00;
+}
+
+section {
+    margin-left: 1rem;
+}
+
+section > p {
+    margin-left: 1rem;
+}
+
+.glossary {
+    font-style: italic;
+    line-height: 1.7rem;
+}
+
+.glossary-word {
+    font-weight: 900;
+}
+
+.glossary-word-def {
+    font-style: normal;
+    font-weight: 900;
+    text-decoration: overline;
 }
