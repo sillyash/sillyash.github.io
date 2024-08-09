@@ -1,4 +1,4 @@
-const start = performance.now(); // start time for execution time
+const startGlossary = performance.now(); // start time for execution time
 
 let glossary = document.getElementsByClassName("glossary-word-def");
 let glossaryStrings = [];
@@ -57,5 +57,5 @@ for (let i = 0; i < glossaryStrings.length; i++) {
 }
 
 
-const end = performance.now(); // end timer for execution time
-console.log(`Execution time: ${end - start} ms`);
+const endGlossary = performance.now(); // end timer for execution time
+console.info(`glossary.js execution time: ${endGlossary - startGlossary} ms`);

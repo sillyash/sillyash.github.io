@@ -10,7 +10,10 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: calc(var(--header-height) + 30px);
+    scroll-padding-top: calc(var(--header-height)
+                        + 2 * var(--padding) 
+                        + 15px
+    );
 }
 
 body {
@@ -28,6 +31,10 @@ main {
     color: var(--text-color-main);
     height: 100%;
     width: auto;
+}
+
+h1 {
+    text-decoration: overline;
 }
 
 .section-title {
