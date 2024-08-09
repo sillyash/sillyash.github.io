@@ -47,4 +47,4 @@ Array.from(dateElements).forEach(element => {
 
 
 const endDate = performance.now(); // end timer for execution time
-console.log(`date-formatter.js execution time: ${endDate - startDate} ms`);
+console.info(`date-formatter.js execution time: ${endDate - startDate} ms`);
