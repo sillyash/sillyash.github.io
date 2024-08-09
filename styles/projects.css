@@ -6,3 +6,17 @@ section > p {
     line-height: 1.6rem;
 }
 
+.project-language {
+    font-weight: bold;
+}
+
+.project-link {
+    font-weight: bold;
+    text-decoration: overline;
+    color: var(--text-color-5);
+    transition: 0.3s all;
+}
+
+.project-link:hover {
+    color: var(--text-color-2);
+}
