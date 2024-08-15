@@ -20,8 +20,7 @@
 }
 
 .glossary-word-def {
-    color: var(--text-color-2);
     font-style: normal;
     font-weight: 900;
-    /*text-decoration: overline; */
+    text-decoration: overline;
 }

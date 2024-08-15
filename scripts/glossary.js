@@ -60,7 +60,15 @@ while (curr = queue.pop()) {
 const endGlossary = performance.now(); // end timer for execution time
 console.info(`glossary.js execution time: ${endGlossary - startGlossary} ms`);
 
+let glossaryDefs = document.getElementsByClassName("glossary-word-def");
+console.log(glossaryDefs);
+// remove the glossary-word elements glossary definitions
+// and readd the words in the correct span
 for (let i=0; i<glossary.length; i++) {
-    let defWord = glossary[i].getElementsByClassName("glossary-word")[0];
-    defWord.classList.remove("glossary-word");
+
+    let defWord = glossary[i].getElementsByClassName("glossary-word")[0].parentElement;
+    defWord.remove();
+
+    let word = glossaryStrings[i];
+    glossaryDefs[i].innerText = word;
 }
