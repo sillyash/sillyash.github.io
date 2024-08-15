@@ -9,11 +9,10 @@ for (let i=0; i<glossary.length; i++) {
     word = word.substring(0, word.length - 1);
     glossaryStrings.push(word); 
 }
-console.log(glossaryStrings);
+console.log("Glossary", glossaryStrings);
 
 function isGlossaryWord(elem, word) {
     let text = elem.wholeText;
-    console.log(word, "\n", text);
     return text.match(word) !== null;
 }
 
@@ -47,7 +46,6 @@ while (curr = queue.pop()) {
                     let word = glossaryStrings[i];
                     if (isGlossaryWord(child, word)) {
                         spanAroundString(curr, word);
-                        console.log("#".repeat(75)+" FOUND! "+"#".repeat(75));
                     }
                 }
                 break;
@@ -61,3 +59,8 @@ while (curr = queue.pop()) {
 
 const endGlossary = performance.now(); // end timer for execution time
 console.info(`glossary.js execution time: ${endGlossary - startGlossary} ms`);
+
+for (let i=0; i<glossary.length; i++) {
+    let defWord = glossary[i].getElementsByClassName("glossary-word")[0];
+    defWord.classList.remove("glossary-word");
+}
