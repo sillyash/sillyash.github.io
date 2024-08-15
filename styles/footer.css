@@ -2,11 +2,9 @@
 @import "vars.css";
 
 footer {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    height: 80px;
+    height: var(--footer-height);
     width: 100%;
+    margin-top: auto;
     padding: var(--padding);
     background-color: var(--bg-color-2);
     color: var(--text-color-2);

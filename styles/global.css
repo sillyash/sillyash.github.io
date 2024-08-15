@@ -3,6 +3,7 @@
 @import "jetbrains-mono.css";
 @import "header.css";
 @import "footer.css";
+@import "glossary.css";
 
 * {
     font-family: 'JetBrains Mono';
@@ -17,6 +18,9 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     min-width: 150px;
     background: var(--bg-color-main);
     width: calc(100% - 2 * var(--padding));
@@ -88,28 +92,4 @@ h1 {
 
 section {
     margin-left: 2%;
-}
-
-.glossary {
-    font-style: italic;
-    line-height: 1.7rem;
-    margin-bottom: 2rem;
-}
-
-.glossary-word {
-    color: var(--text-color-4);
-    font-weight: 900;
-    text-decoration: none;
-    font-style: normal;
-    transition: 0.3s all;
-}
-
-.glossary-word:hover {
-    color: var(--text-color-2);
-}
-
-.glossary-word-def {
-    font-style: normal;
-    font-weight: 900;
-    text-decoration: overline;
 }
