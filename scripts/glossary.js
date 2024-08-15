@@ -5,16 +5,16 @@ let glossaryStrings = [];
 
 // get the words from my glossary definitions to search for them later
 for (let i=0; i<glossary.length; i++) {
-    glossaryStrings.push(glossary[i].outerText);
+    let word = glossary[i].outerText;
+    word = word.substring(0, word.length - 1);
+    glossaryStrings.push(word); 
 }
 console.log(glossaryStrings);
 
-function isGlossaryDefinition(elem) {
-    return typeof elem.classList !== 'undefined' && elem.classList.contains("glossary-word-def");
-}
-
 function isGlossaryWord(elem, word) {
-    return elem.textContent.includes(word) && !isGlossaryDefinition(elem);
+    let text = elem.wholeText;
+    console.log(word, "\n", text);
+    return text.match(word) !== null;
 }
 
 function spanAroundString(elem, string) {
@@ -25,33 +25,35 @@ function spanAroundString(elem, string) {
             const matches = node.textContent.match(regex);
             if (matches) {
                 const replacement = document.createElement('span');
-                replacement.innerHTML = node.textContent.replace(regex, `<a href='#glossary' class='glossary-word'>${string}</a>`);
+                replacement.innerHTML = node.textContent.replace(
+                    regex,
+                    `<a href='#glossary' class='glossary-word'>${string}</a>`
+                );
                 node.parentNode.replaceChild(replacement, node);
             }
         }
     });
 }
 
-for (let i = 0; i < glossaryStrings.length; i++) {
-    let word = glossaryStrings[i],
-        queue = [document.body],
-        curr;
+let queue = [document.body], curr;
 
-    while (curr = queue.pop()) {
-        if (!curr.textContent.match(word)) continue;
+while (curr = queue.pop()) {
 
-        for (let j = 0; j < curr.childNodes.length; ++j) {
-            let child = curr.childNodes[j];
-            switch (child.nodeType) {
-                case Node.TEXT_NODE:
+    for (let j = 0; j < curr.childNodes.length; ++j) {
+        let child = curr.childNodes[j];
+        switch (child.nodeType) {
+            case Node.TEXT_NODE:
+                for (let i = 0; i < glossaryStrings.length; i++) {
+                    let word = glossaryStrings[i];
                     if (isGlossaryWord(child, word)) {
                         spanAroundString(curr, word);
+                        console.log("#".repeat(75)+" FOUND! "+"#".repeat(75));
                     }
-                    break;
-                case Node.ELEMENT_NODE:
-                    queue.push(child);
-                    break;
-            }
+                }
+                break;
+            case Node.ELEMENT_NODE:
+                queue.push(child);
+                break;
         }
     }
 }
