@@ -15,6 +15,7 @@ footer {
 footer > div {
     display: flex;
     flex-direction: row;
+    margin-top: 1rem;
     justify-content: space-around;
     align-items: center;
 }
@@ -61,9 +62,10 @@ footer > div > img {
 }
 
 #footer-separator {
-    margin: 1.3rem;
+    margin: 1rem;
     width: 100%;
-    border: 1px solid var(--text-color-3);
+    align-self: center;
+    border: 1px solid var(--text-color-2);
 }
 
 #copyright-notice {
