@@ -2,10 +2,83 @@
 @import "vars.css";
 
 footer {
-    height: var(--footer-height);
+    display: flex;
+    flex-direction: column;
     width: 100%;
     margin-top: auto;
     padding: var(--padding);
     background-color: var(--bg-color-2);
+    color: var(--text-color-2);
+    font-size: small;
+}
+
+footer > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer > div > img {
+    height: 60px;
+}
+
+#footer-contact {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-contact a {
+    display: flex;
+    margin-bottom: 5px;
+    color: var(--text-color-footer);
+    text-decoration: none;
+    transition: 0.3s all;
+}
+
+#footer-contact a:hover {
+    color: var(--text-color-2);
+}
+
+#footer-contact > a > img {
+    width: 16px;
+    margin-right: 8px;
+}
+
+#footer-navbar {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-navbar a {
+    color: var(--text-color-footer);
+    text-decoration: none;
+    transition: 0.3s all;
+}
+
+#footer-navbar a:hover {
+    color: var(--text-color-2);
+}
+
+#footer-separator {
+    margin: 1.3rem;
+    width: 100%;
+    border: 1px solid var(--text-color-3);
+}
+
+#copyright-notice {
+    display: inline-block;
+    margin: 0 0 0 0;
+    text-align: center;
+    color: var(--text-color-footer);
+}
+
+#copyright-notice a {
+    color: var(--text-color-3);
+    text-decoration: none;
+    transition: 0.3s all;
+}
+
+#copyright-notice a:hover {
     color: var(--text-color-2);
 }
