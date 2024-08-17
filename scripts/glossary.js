@@ -56,10 +56,6 @@ while (curr = queue.pop()) {
     }
 }
 
-
-const endGlossary = performance.now(); // end timer for execution time
-console.info(`glossary.js execution time: ${endGlossary - startGlossary} ms`);
-
 let glossaryDefs = document.getElementsByClassName("glossary-word-def");
 console.log(glossaryDefs);
 // remove the glossary-word elements glossary definitions
@@ -72,3 +68,6 @@ for (let i=0; i<glossary.length; i++) {
     let word = glossaryStrings[i];
     glossaryDefs[i].innerText = word;
 }
+
+const endGlossary = performance.now(); // end timer for execution time
+console.info(`glossary.js execution time: ${endGlossary - startGlossary} ms`);
