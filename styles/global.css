@@ -74,9 +74,16 @@ h1 {
     align-content: center;
 }
 
-.section-title > h2, .section-title > p {
+.section-title > h2 {
     margin-top: 0;
     margin-bottom: 0;
+    text-align: justify;
+}
+
+.section-title > p, .section-title > a {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
 }
 
 .section-title-separator {
