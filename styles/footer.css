@@ -65,7 +65,7 @@ footer > div > img {
     margin: 1rem;
     width: 100%;
     align-self: center;
-    border: 1px solid var(--text-color-2);
+    border: 1px solid var(--text-color-6);
 }
 
 #copyright-notice {
