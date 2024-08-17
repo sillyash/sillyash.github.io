@@ -11,28 +11,25 @@ for (let i=0; i<glossary.length; i++) {
 }
 console.log("Glossary", glossaryStrings);
 
+
+
 function isGlossaryWord(elem, word) {
     let text = elem.wholeText;
     return text.match(word) !== null;
 }
 
-function spanAroundString(elem, string) {
-    // Using a more precise method to replace text nodes only
-    const regex = new RegExp(`\\b${string}\\b`, 'g');
-    elem.childNodes.forEach(node => {
-        if (node.nodeType === Node.TEXT_NODE) {
-            const matches = node.textContent.match(regex);
-            if (matches) {
-                const replacement = document.createElement('span');
-                replacement.innerHTML = node.textContent.replace(
-                    regex,
-                    `<a href='#glossary' class='glossary-word'>${string}</a>`
-                );
-                node.parentNode.replaceChild(replacement, node);
-            }
-        }
-    });
+function AnchorAroundString(curr, word) {
+    // Define a regular expression pattern that matches the word with word boundaries and possible punctuation
+    const pattern = new RegExp(`\\b${word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'g');
+
+    // Define the replacement anchor tag
+    const replacement = `<a href="#glossary" class="glossary-word">${word}</a>`;
+
+    // Replace all case-sensitive occurrences of the word with the anchor tag
+    const result = curr.innerHTML.replace(pattern, replacement);
+    curr.innerHTML = result;
 }
+
 
 let queue = [document.body], curr;
 
@@ -45,7 +42,8 @@ while (curr = queue.pop()) {
                 for (let i = 0; i < glossaryStrings.length; i++) {
                     let word = glossaryStrings[i];
                     if (isGlossaryWord(child, word)) {
-                        spanAroundString(curr, word);
+                        AnchorAroundString(curr, word);
+
                     }
                 }
                 break;
@@ -56,18 +54,19 @@ while (curr = queue.pop()) {
     }
 }
 
+
 let glossaryDefs = document.getElementsByClassName("glossary-word-def");
 console.log(glossaryDefs);
 // remove the glossary-word elements glossary definitions
 // and readd the words in the correct span
 for (let i=0; i<glossary.length; i++) {
 
-    let defWord = glossary[i].getElementsByClassName("glossary-word")[0].parentElement;
-    defWord.remove();
-
+    let defWord = glossary[i];
+    
     let word = glossaryStrings[i];
-    glossaryDefs[i].innerText = word;
+    defWord.innerHTML =  word;
 }
+
 
 const endGlossary = performance.now(); // end timer for execution time
 console.info(`glossary.js execution time: ${endGlossary - startGlossary} ms`);
