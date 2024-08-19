@@ -12,4 +12,31 @@ section > p {
     right: 32px;
     height: 27%;
 }
-  
+
+
+
+/* mobile landscape */
+@media all and (min-width: 480px) {
+
+}
+
+
+
+/* tablet */
+@media all and (min-width: 768px) {
+
+}
+
+
+
+/* desktop */
+@media all and (min-width: 1024px) {
+
+}
+
+
+
+/* desktop wide */
+@media all and (min-width: 1200px) {
+
+}

@@ -1,9 +1,31 @@
 @import "global.css";
 @import "vars.css";
 
-section > p {
-    margin: 0.8rem 0 0 1.5rem;
-    line-height: 1.6rem;
-    text-align: justify;
+/* mobile / base */
+
+
+/* mobile landscape */
+@media all and (min-width: 480px) {
+
 }
-  
+
+
+
+/* tablet */
+@media all and (min-width: 768px) {
+
+}
+
+
+
+/* desktop */
+@media all and (min-width: 1024px) {
+
+}
+
+
+
+/* desktop wide */
+@media all and (min-width: 1200px) {
+
+}

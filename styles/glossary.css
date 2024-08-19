@@ -3,8 +3,9 @@
 
 .glossary {
     font-style: italic;
-    line-height: 1.7rem;
-    margin-bottom: 2rem;
+
+    line-height: 14px;
+    margin-bottom: 10px;
 }
 
 .glossary-word {
@@ -23,4 +24,41 @@
     font-style: normal;
     font-weight: 900;
     text-decoration: overline;
+}
+
+
+
+/* mobile landscape */
+@media all and (min-width: 480px) {
+    .glossary {
+        line-height: 16px;
+        margin-bottom: 12px;
+    }
+}
+
+
+
+/* tablet */
+@media all and (min-width: 768px) {
+    .glossary {
+        line-height: 18px;
+        margin-bottom: 14px;
+    }
+}
+
+
+
+/* desktop */
+@media all and (min-width: 1024px) {
+    .glossary {
+        line-height: 20px;
+        margin-bottom: 14px;
+    }
+}
+
+
+
+/* desktop wide */
+@media all and (min-width: 1200px) {
+
 }

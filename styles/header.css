@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import "vars.css";
 
+/* mobile / base */
 header {
     display: flex;
     justify-content: space-between;
@@ -38,4 +39,33 @@ header > a > img {
 
 #current-page {
     color: var(--bg-color-main) !important;
+}
+
+
+
+/* mobile landscape */
+@media all and (min-width: 480px) {
+
+}
+
+
+
+/* tablet */
+@media all and (min-width: 768px) {
+
+}
+
+
+
+/* desktop */
+@media all and (min-width: 1024px) {
+
+}
+
+
+
+/* desktop wide */
+
+@media all and (min-width: 1200px) {
+
 }

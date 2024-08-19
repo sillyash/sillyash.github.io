@@ -1,6 +1,8 @@
 @charset "utf-8";
 @import "vars.css";
 
+
+/* mobile / base */
 footer {
     display: flex;
     flex-direction: column;
@@ -83,4 +85,33 @@ footer > div > img {
 
 #copyright-notice a:hover {
     color: var(--text-color-2);
+}
+
+
+
+/* mobile landscape */
+@media all and (min-width: 480px) {
+
+}
+
+
+
+/* tablet */
+@media all and (min-width: 768px) {
+
+}
+
+
+
+/* desktop */
+@media all and (min-width: 1024px) {
+
+}
+
+
+
+/* desktop wide */
+
+@media all and (min-width: 1200px) {
+
 }
