@@ -1,5 +1,5 @@
 <template>
-  <v-footer height="40" app>
+  <v-footer id="footer" app>
     <a
       v-for="item in items"
       :key="item.title"
@@ -22,7 +22,6 @@
       &copy; 2024-{{ (new Date()).getFullYear() }} <span class="d-none d-sm-inline-block">Ashley Merienne</span>
       —
       <a
-        class="text-decoration-none on-surface"
         id="licenseInfo"
         href="https://www.gnu.org/licenses/gpl-3.0.en.html"
         rel="noopener noreferrer"
@@ -64,12 +63,32 @@
   ]
 </script>
 
-<style scoped lang="sass">
-  .social-link :deep(.v-icon)
-    color: rgba(var(--v-theme-on-background), var(--v-disabled-opacity))
-    text-decoration: none
-    transition: .2s ease-in-out
+<style>
+  @import "/src/styles/jetbrains-mono.css";
+  @import "/src/styles/main.css";
 
-    &:hover
-      color: rgba(25, 118, 210, 1)
+  #footer {
+    height: 60px;
+    background-color: var(--bg-color-2);
+  }
+
+  .social-link {
+   color: #aaaaaa;
+    text-decoration: none;
+    transition: 0.4s ease-in-out all;
+  }
+
+  .social-link:hover {
+      color: var(--bg-color-main);
+  }
+
+  #licenseInfo {
+    color: white;
+    text-decoration: none;
+    transition: 0.4s all;
+  }
+
+  #licenseInfo:hover {
+    color: var(--bg-color-main);
+  }
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <div class="header">
-    <a href="index.html">
+  <div id="header">
+    <a id="navLogo" href="index.html">
       <img src="/src/assets/mitsuki.jpg"/>
     </a>
 
@@ -49,16 +49,20 @@
   @import "/src/styles/jetbrains-mono.css";
   @import "/src/styles/main.css";
 
-  .header {
+  #header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     padding: 10px;
     width: 100%;
-    height: 70px;
-    background-color: rgb(var(--bg-color-2));
-    color: rgb(var(--text-color-2));
+    height: var(--header-height);
+    background-color: var(--bg-color-2);
+    color: var(--text-color-2);
+  }
+
+  #navLogo {
+    height: fit-content;
   }
 
   .navbar {
@@ -69,18 +73,19 @@
     justify-content: space-around;
   }
 
-  .navbar-item {
-    color: rgb(var(--text-color-2));
+  .navbar-link {
+    color: var(--text-color-2);
     text-decoration: overline;
     transition: 0.3s all;
   }
 
-  .navbar-item:hover {
-    color: rgb(var(--bg-color-main));
+  .navbar-link:hover {
+    color: var(--bg-color-main);
   }
 
-  a > img {
-    height: 55px;
+  #navLogo > img {
+    height: 50px;
     object-fit: contain;
+    vertical-align: middle;
   }
 </style>
