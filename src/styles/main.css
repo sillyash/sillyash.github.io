@@ -9,7 +9,7 @@
   --text-color-4: #3a6d8c;
   --text-color-5: #542870;
   --text-color-6: #404040;
-  --text-color-footer: #787878;
+  --text-color-footer: #aaaaaa;
   --header-height: 70px;
   --padding: 10px;
 }
@@ -24,6 +24,10 @@ html {
                         + 2 * var(--padding) 
                         + 15px
     );
+}
+
+body {
+  background-color: var(--bg-color-main);
 }
 
 .shakey {

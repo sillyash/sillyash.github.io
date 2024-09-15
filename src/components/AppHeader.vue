@@ -11,7 +11,7 @@
         :href="item.href"
         :title="item.title"
         class="navbar-link"
-        target="_blank"
+        :target="item.isBlank ? '_blank' : null"
       >
         {{ item.title }}
       </a>
@@ -41,6 +41,7 @@
     {
       title: 'github',
       href: 'https://github.com/sillyash',
+      isBlank: true,
     },
   ]
 </script>

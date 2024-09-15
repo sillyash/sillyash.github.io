@@ -16,8 +16,8 @@
     </a>
 
     <div
-      class="text-caption text-disabled"
-      style="position: absolute; right: 16px;"
+      class="text-caption"
+      style="position: absolute; right: 16px; color: var(--text-color-footer);"
     >
       &copy; 2024-{{ (new Date()).getFullYear() }} <span class="d-none d-sm-inline-block">Ashley Merienne</span>
       —
@@ -83,7 +83,7 @@
   }
 
   #licenseInfo {
-    color: white;
+    color: var(--text-color-footer);
     text-decoration: none;
     transition: 0.4s all;
   }
