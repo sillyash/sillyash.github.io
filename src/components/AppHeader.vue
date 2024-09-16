@@ -1,8 +1,8 @@
 <template>
   <div id="header">
-    <a id="navLogo" href="index.html">
+    <RouterLink id="navLogo" to="/">
       <img src="/src/assets/mitsuki.jpg"/>
-    </a>
+    </RouterLink>
 
     <div class="navbar" v-for="item in items">
       <RouterLink
