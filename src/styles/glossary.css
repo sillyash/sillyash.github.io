@@ -1,0 +1,26 @@
+@charset "utf-8";
+@import "vars.css";
+
+.glossary {
+    font-style: italic ;
+    text-align: justify;
+    margin: 10px 3%;
+}
+
+.glossary-word {
+    color: var(--text-color-4);
+    font-weight: 900;
+    text-decoration: none;
+    font-style: normal;
+    transition: 0.3s all;
+}
+
+.glossary-word:hover {
+    color: var(--text-color-2);
+}
+
+.glossary-word-def {
+    font-style: normal;
+    font-weight: 900;
+    text-decoration: overline;
+}
