@@ -15,11 +15,3 @@ import AppHeader from '@/components/AppHeader.vue';
 
   //
 </script>
-
-<style lang="css" scoped>
-  @import "/src/styles/main.css";
-
-  .v-main {
-    margin-top: var(--header-height);
-  }
-</style>

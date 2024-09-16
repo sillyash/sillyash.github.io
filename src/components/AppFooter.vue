@@ -64,6 +64,7 @@
 </script>
 
 <style>
+  @import "/src/styles/jetbrains-mono.css";
   @import "/src/styles/main.css";
 
   #footer {
