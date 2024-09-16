@@ -1,24 +1,26 @@
 <template>
   <div id="header">
-    <RouterLink id="navLogo" to="/">
-      <img src="/src/assets/mitsuki.jpg"/>
+    <RouterLink to="/">
+      <img id="navLogo" src="/src/assets/mitsuki.jpg"/>
     </RouterLink>
 
-    <div class="navbar" v-for="item in items">
-      <RouterLink
+    <div class="navbar">
+      <template v-for="item in items">
+        <RouterLink class="navbar-link"
+          v-if="item.isRouterLink"
+          :to="item.href"
+        >
+          {{ item.title }}
+        </RouterLink>
+        <a v-else
           class="navbar-link"
-        v-if="item.isRouterLink"
-        :to="item.href"
-      >
-        {{ item.title }}
-      </RouterLink>
-      <a v-else
-        class="navbar-link"
-        :href="item.href"
-        target="_blank"
-      >
-        {{ item.title }}
-      </a>
+          :href="item.href"
+          target="_blank"
+        >
+          {{ item.title }}
+        </a>
+      </template>
+
     </div>
   </div>
 
@@ -64,6 +66,7 @@
     align-items: center;
     position: fixed;
     padding: 10px;
+    padding-left: 0;
     width: 100%;
     height: var(--header-height);
     background-color: var(--bg-color-2);
@@ -71,30 +74,30 @@
   }
 
   #navLogo {
-    height: fit-content;
+    height: var(--header-height);
+    vertical-align: middle;
   }
 
   .navbar {
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: 100%;
     align-items: center;
     justify-content: space-around;
   }
 
   .navbar-link {
+    font-size: 1.4rem;
     color: var(--text-color-2);
     text-decoration: overline;
     transition: 0.3s all;
+
+    align-content: center;
+    height: 100%;
   }
 
   .navbar-link:hover {
     color: var(--bg-color-main);
-  }
-
-  #navLogo > img {
-    height: 50px;
-    object-fit: contain;
-    vertical-align: middle;
   }
 </style>
