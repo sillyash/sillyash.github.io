@@ -55,7 +55,7 @@
 
   <section>
     <div class="section-title">
-      <h2>Raspberry Pi 4 DevOps</h2>
+      <h2>RasPi 4 DevOps</h2>
       <p class="section-title-separator">·</p>
       <p class="project-language">MySQL, MariaDB & GNU/Linux</p>
       <p class="section-title-separator">·</p>
@@ -70,6 +70,10 @@
       This project was also first semester, and made by one of my favourite teachers ever, Nicola
       Roberto Zema. You can find the subject
       <a class="project-link" href="https://www.lri.fr/~zema/S103/S103.html">here</a>.
+    </p>
+    <p>
+      We had to setup a Raspberry Pi 4 for database calls, SSH and network calls from scratch.
+      My group tried to set it up with Arch Linux ARM but failed, so we went with the classic Debian OS.
     </p>
     <p>
       What I liked with this project was the <span class="shakey">challenge.</span> We were kind

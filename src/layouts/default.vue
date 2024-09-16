@@ -15,12 +15,11 @@
 
   #main {
     padding-top: calc(var(--header-height) + 2 * var(--padding));
-    padding-right: calc(var(--footer-height) + 2 * var(--padding));
+    padding-right: var(--main-padding);
+    padding-left: var(--main-padding);
     color: var(--text-color-main);
     height: 100%;
     width: 100%;
-
-    padding-left: 10px;
   }
 </style>
 

@@ -61,10 +61,6 @@ body {
   color: var(--text-color-3);
 }
 
-section {
-  margin-left: 2%;
-}
-
 h1 {
   text-decoration: overline;
   text-align: center;
