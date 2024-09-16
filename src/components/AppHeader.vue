@@ -4,14 +4,18 @@
       <img src="/src/assets/mitsuki.jpg"/>
     </a>
 
-    <div class="navbar">
-      <a
-        v-for="item in items"
-        :key="item.title"
-        :href="item.href"
-        :title="item.title"
+    <div class="navbar" v-for="item in items">
+      <RouterLink
+          class="navbar-link"
+        v-if="item.isRouterLink"
+        :to="item.href"
+      >
+        {{ item.title }}
+      </RouterLink>
+      <a v-else
         class="navbar-link"
-        :target="item.isBlank ? '_blank' : null"
+        :href="item.href"
+        target="_blank"
       >
         {{ item.title }}
       </a>
@@ -24,24 +28,28 @@
   const items = [
     {
       title: 'home',
-      href: 'index.html',
+      href: '/',
+      isRouterLink: true,
     },
     {
       title: 'about',
-      href: 'index.html#about',
+      href: '/AboutMe',
+      isRouterLink: true,
     },
     {
       title: 'projects',
-      href: 'projects.html',
+      href: '/Projects',
+      isRouterLink: true,
     },
     {
       title: 'contact',
-      href: 'contact.html'
+      href: '/ContactMe',
+      isRouterLink: true,
     },
     {
       title: 'github',
       href: 'https://github.com/sillyash',
-      isBlank: true,
+      isRouterLink: false,
     },
   ]
 </script>
