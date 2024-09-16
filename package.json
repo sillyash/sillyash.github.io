@@ -12,6 +12,7 @@
     "core-js": "^3.37.1",
     "roboto-fontface": "*",
     "vue": "^3.4.31",
+    "vue-word-highlighter": "^1.2.4",
     "vuetify": "^3.6.11"
   },
   "devDependencies": {
