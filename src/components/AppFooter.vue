@@ -67,12 +67,12 @@
   @import "/src/styles/main.css";
 
   #footer {
-    height: 60px;
+    height: var(--footer-height);
     background-color: var(--bg-color-2);
   }
 
   .social-link {
-   color: #aaaaaa;
+    color: #aaaaaa;
     text-decoration: none;
     transition: 0.4s ease-in-out all;
   }

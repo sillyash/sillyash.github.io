@@ -14,12 +14,19 @@
   @import "@/styles/main.css";
 
   #main {
-    padding-top: calc(var(--header-height) + 2 * var(--padding));
-    padding-right: var(--main-padding);
-    padding-left: var(--main-padding);
-    color: var(--text-color-main);
     height: 100%;
     width: 100%;
+
+    padding-top: calc(var(--header-height) + 2 * var(--padding));
+    /*
+    padding-bottom: var(--footer-height) + 2 * var(--padding);
+    handled by v-footer
+    */
+
+    padding-right: var(--main-padding);
+    padding-left: var(--main-padding);
+
+    color: var(--text-color-main);
   }
 </style>
 
