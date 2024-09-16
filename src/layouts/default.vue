@@ -2,7 +2,7 @@
   <v-app>
     <AppHeader />
 
-    <v-main>
+    <v-main id="main">
       <router-view />
     </v-main>
 
@@ -10,8 +10,16 @@
   </v-app>
 </template>
 
-<script setup>
-import AppHeader from '@/components/AppHeader.vue';
+<style lang="css">
+  @import "/src/styles/main.css";
 
-  //
+  #main {
+    margin-top: calc(var(--header-height) + 10px);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+</style>
+
+<script setup>
+  import AppHeader from '@/components/AppHeader.vue';
 </script>
