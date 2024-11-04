@@ -12,6 +12,11 @@ I used Vuetify for the code and file structure, and custom theming.
 
 ```bash
 npm run build
-git subtree push --prefix dist origin gh-pages
+```
+
+## Deploy
+
+```bash
+npm run deploy
 ```
 
