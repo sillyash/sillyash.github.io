@@ -8,4 +8,10 @@ Hosted by GitHub Pages on [here](https://sillyash.github.io)
 
 I used Vuetify for the code and file structure, and custom theming.
 
+## Build
+
+```bash
+npm run build
+git subtree push --prefix dist origin gh-pages
+```
 
