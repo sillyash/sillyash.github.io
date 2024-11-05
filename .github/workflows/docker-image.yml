@@ -64,5 +64,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Deploy the Docker image
-        run: docker run -d -p 8080:80 --restart unless-stopped ghcr.io/sillyash/sillyash.github.io
+        run: docker run -d -p 8080:80 --restart unless-stopped ghcr.io/sillyash/sillyash.github.io:main
       
