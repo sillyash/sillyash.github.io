@@ -6,7 +6,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix --ignore-path .gitignore",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && cp CNAME dist/CNAME",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
