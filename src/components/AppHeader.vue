@@ -1,18 +1,22 @@
 <template>
   <div id="header">
     <RouterLink to="/">
-      <img id="navLogo" src="/src/assets/mitsuki.jpg"/>
+      <img id="navLogo" src="/src/assets/mitsuki.jpg">
     </RouterLink>
 
     <div class="navbar">
       <template v-for="item in items">
-        <RouterLink class="navbar-link"
+        <RouterLink
           v-if="item.isRouterLink"
+          :key="item.title"
+          class="navbar-link"
           :to="item.href"
         >
           {{ item.title }}
         </RouterLink>
-        <a v-else
+        <a
+          v-else
+          :key="item.title"
           class="navbar-link"
           :href="item.href"
           target="_blank"

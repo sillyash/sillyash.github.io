@@ -3,11 +3,11 @@
     <a
       v-for="item in items"
       :key="item.title"
-      :href="item.href"
-      :title="item.title"
       class="d-inline-block mx-3 social-link"
+      :href="item.href"
       rel="noopener noreferrer"
       target="_blank"
+      :title="item.title"
     >
       <v-icon
         :icon="item.icon"

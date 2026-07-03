@@ -10,6 +10,11 @@
   </v-app>
 </template>
 
+<script setup>
+  import AppHeader from '@/components/AppHeader.vue'
+  import AppFooter from '@/components/AppFooter.vue'
+</script>
+
 <style lang="css">
   @import "@/styles/main.css";
 
@@ -29,8 +34,3 @@
     color: var(--text-color-main);
   }
 </style>
-
-<script setup>
-  import AppHeader from '@/components/AppHeader.vue';
-  import AppFooter from '@/components/AppFooter.vue';
-</script>
