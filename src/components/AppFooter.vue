@@ -5,19 +5,19 @@
       :key="item.title"
       :href="item.href"
       :title="item.title"
-      class="d-inline-block mx-2 social-link"
+      class="d-inline-block mx-3 social-link"
       rel="noopener noreferrer"
       target="_blank"
     >
       <v-icon
         :icon="item.icon"
-        :size="item.icon === '$vuetify' ? 24 : 16"
+        :size="item.icon === '$vuetify' ? 36 : 28"
       />
     </a>
 
     <div
-      class="text-caption"
-      style="position: absolute; right: 16px; color: var(--text-color-footer);"
+      class="footer-copyright"
+      style="color: var(--text-color-footer);"
     >
       &copy; 2024-{{ (new Date()).getFullYear() }} <span class="d-none d-sm-inline-block">Ashley Merienne</span>
       —
@@ -71,8 +71,13 @@
       color: var(--bg-color-main);
   }
 
+  .footer-copyright {
+    margin-left: auto;
+    font-size: 1rem;
+  }
+
   #licenseInfo {
-    font-size: 0.75rem;
+    font-size: 1rem;
     color: var(--text-color-footer);
     text-decoration: none;
     transition: 0.4s all;
