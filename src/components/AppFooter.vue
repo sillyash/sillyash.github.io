@@ -72,6 +72,7 @@
   }
 
   #licenseInfo {
+    font-size: 0.75rem;
     color: var(--text-color-footer);
     text-decoration: none;
     transition: 0.4s all;
